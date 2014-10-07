@@ -1,22 +1,22 @@
 public class Jah {
-	public static void main(String args[]){
-		Reader m = new marihuana();
-		m.Scan();
-		m.i = count(m.i);
+	
+	public static void main(String args[]) {
+		marihuana m = new marihuana(); // хз что это у теб€ за Reader был, тип переменной тоже должен быть marihuana  
+		m.Scan(); 
+		m.i = count(m.i); // напр€мую доступ к пол€м класса нежелателен, нарушает инкапсул€цию. прин€то делать через метод, типа m.getI()
 
-			if (m.i=2){
-				System.out.println("ƒавай не палимс€, по тихому навал€мис€!");
-			}
-			else 
-				{ if (m.i=1){
-				System.out.println("ј у мен€ есть, давай не палимс€, по тихому навал€мис€!");
-						}
-				else {
-					System.out.println("„е ты палишьс€?");
-				}}	
+		if (m.i == 2) { // один знак = - это присваивание, а два - это проверка на равенство
+			System.out.println("ƒавай не палимс€, по тихому навал€мис€!");
+		} else if (m.i == 1) { // можно использовать тут конструкцию "else if"
+			System.out.println("ј у мен€ есть, давай не палимс€, по тихому навал€мис€!");
+		} else {
+			System.out.println("„е ты палишьс€?");
+		}
+		// и давай это, красивенько код оформл€й, чтоб удобно было читать ;)
 	}
-	private static int count(int x){
-		x=x+1;
+	
+	private static int count(int x) {
+		x = x + 1;
 		return x;
 	}
 }
